@@ -1,0 +1,20 @@
+#summary Information about Amateras Air / AIR GEAR; an Eclipse plugin.
+
+= Introduction =
+
+[http://amateras.sourceforge.jp/cgi-bin/fswiki_en/wiki.cgi?page=AmaterasAIR Homepage]
+
+= Installing =
+
+ # Install EclipseIde
+ # Update to Install GEF in Eclipse
+ # Download the jar fro the Homepage
+ # Place it into you dropins directory
+ # Restart Eclipse
+
+= Details =
+
+Add your content here.  Format your content with:
+  * Text in *bold* or _italic_
+  * Headings, paragraphs, and lists
+  * Automatic links to other wiki pages
