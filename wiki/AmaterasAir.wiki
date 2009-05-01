@@ -8,7 +8,7 @@
 
  # Install EclipseIde
  # Update to Install GEF in Eclipse
- # Download the jar fro the Homepage
+ # Download the AIR GEAR jar, from [http://iij.dl.sourceforge.jp/amateras/38801/net.sf.amateras.air_1.0.2.jar here]. v1.02 - 2009-04-15
  # Place it into you dropins directory
  # Restart Eclipse
 
