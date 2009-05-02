@@ -1,9 +1,13 @@
 #summary Information about the Eclipse Development Environment.
 
-= Introduction =
+== Introduction ==
 
 TODO
 
-= Details =
+== Download ==
+
+TODO
+
+== Install ==
 
 TODO
