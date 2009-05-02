@@ -3,6 +3,7 @@
 = Development Environment =
 
  * EclipseIde
+ * SubEclipse
  * AirSdk
  * FlexSdk
  * AmaterasAir - AIR GEAR
