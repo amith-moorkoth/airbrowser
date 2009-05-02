@@ -1,0 +1,7 @@
+#summary SubEclipse is an Eclipse Plugin for Subversion.
+
+ * [http://subclipse.tigris.org/ Homepage]
+
+== Install ==
+
+ * [http://subclipse.tigris.org/install.html HowTo]
