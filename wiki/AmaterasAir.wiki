@@ -1,10 +1,10 @@
 #summary Information about Amateras Air / AIR GEAR; an Eclipse plugin.
 
-= Introduction =
+== Introduction ==
 
 [http://amateras.sourceforge.jp/cgi-bin/fswiki_en/wiki.cgi?page=AmaterasAIR Homepage]
 
-= Installing =
+== Installing ==
 
  # Install EclipseIde
  # Update to Install GEF in Eclipse
@@ -12,6 +12,6 @@
  # Place it into you dropins directory
  # Restart Eclipse
 
-= Details =
+== Details ==
 
 TODO
