@@ -1,0 +1,3 @@
+#summary Adobe Air SDK.
+
+ * [http://www.adobe.com/cfusion/entitlement/index.cfm?e=airsdk Download]
