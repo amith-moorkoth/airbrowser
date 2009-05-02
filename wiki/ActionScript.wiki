@@ -1,9 +1,9 @@
 #summary Information about ActionScript.
 
-= Introduction =
+== Introduction ==
 
 TODO
 
-= Details =
+== Details ==
 
 TODO
