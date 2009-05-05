@@ -1,0 +1,17 @@
+#summary Roadmap for Air Browser.
+#labels Phase-Requirements
+
+= Roadmap =
+
+ * v0.1
+   * TabsSupport
+ * v0.2
+   * HomePage
+ * v0.3
+   * RefreshPage
+ * v0.4
+   * PreferancesSupport
+ * v0.5
+   * RightClick
+ * v0.6
+   * BookMarks
