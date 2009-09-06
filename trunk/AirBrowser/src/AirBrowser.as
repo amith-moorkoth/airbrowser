@@ -21,6 +21,7 @@ public function newtab():Number {
   var tmptxt:TextInput = new TextInput();
   var tmpbutgo:Button = new Button();
   var tmpbutstop:Button = new Button();
+  var tmpbutrefresh:Button = new Button();
   var tmpbutclose:Button = new Button();
   var tmphtml:HTML = new HTML();
   var tmpid:Number = 0;
@@ -40,6 +41,10 @@ public function newtab():Number {
   tmpbutstop.label = "Stop";
   tmpbutstop.addEventListener(MouseEvent.CLICK, butstopclicked);
   tmphbox.addChild(tmpbutstop);
+  tmpbutrefresh.id = "butrefresh-" + tmpid;
+  tmpbutrefresh.label = "Refresh";
+  tmpbutrefresh.addEventListener(MouseEvent.CLICK, butgoclicked);
+  tmphbox.addChild(tmpbutrefresh);
   tmpbutclose.id = "butclose-" + tmpid;
   tmpbutclose.label = "Close";
   tmpbutclose.addEventListener(MouseEvent.CLICK, butcloseclicked);

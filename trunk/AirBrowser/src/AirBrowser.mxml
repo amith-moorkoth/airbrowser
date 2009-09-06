@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<mx:WindowedApplication title="AirBrowser" resizing="winresize()" applicationComplete="init()" layout="absolute" xmlns:mx="http://www.adobe.com/2006/mxml">
+<mx:WindowedApplication title="AirBrowser" resizing="winresize()" displayStateChange="winresize()" applicationComplete="init()" layout="absolute" xmlns:mx="http://www.adobe.com/2006/mxml">
 <mx:Script source="AirBrowser.as"/>
-<mx:Button label="NewA" click="newtab()" id="butnew" y="10" x="610" height="20" width="50"/>
+<mx:Button label="New Tab" click="newtab()" id="butnew" y="10" x="10" height="20" width="70"/>
 <mx:TabNavigator horizontalAlign="center" id="tab1" y="40" x="10" height="510" width="650"/>
 </mx:WindowedApplication>
