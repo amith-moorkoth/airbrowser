@@ -20,7 +20,7 @@ FLEXARGS=-optimize -headless-server -incremental -source-path=$(INCDIR) -source-
 
 all: $(AIRSWF) $(AIRAPP)
 
-$(AIRSWF): $(MXML)
+$(AIRSWF): src/*
 	$(AMXMLC) $(FLEXARGS) -output $(AIRSWF) $(MXML)
 
 ## Package the Air .app
