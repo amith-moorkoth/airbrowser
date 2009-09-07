@@ -43,7 +43,7 @@ public function newtab():Number {
   tmphbox.addChild(tmpbutstop);
   tmpbutrefresh.id = "butrefresh-" + tmpid;
   tmpbutrefresh.label = "Refresh";
-  tmpbutrefresh.addEventListener(MouseEvent.CLICK, butgoclicked);
+  tmpbutrefresh.addEventListener(MouseEvent.CLICK, butrefreshclicked);
   tmphbox.addChild(tmpbutrefresh);
   tmpbutclose.id = "butclose-" + tmpid;
   tmpbutclose.label = "Close";
@@ -79,6 +79,12 @@ public function butgoclicked(evt:Event):void {
   var res:Array = evt.currentTarget.id.split(/-/);
   var tmpid:Number = res[1];
   tabs[tmpid].htmlwindow.location = tabs[tmpid].txturlinput.text;
+}
+
+public function butrefreshclicked(evt:Event):void {
+  var res:Array = evt.currentTarget.id.split(/-/);
+  var tmpid:Number = res[1];
+  tabs[tmpid].htmlwindow.reload();
 }
 
 public function butstopclicked(evt:Event):void {
