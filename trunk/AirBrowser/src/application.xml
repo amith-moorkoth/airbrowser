@@ -3,7 +3,7 @@
 	<id>AirBrowser</id>
 	<filename>AirBrowser</filename>
 	<name>AirBrowser</name>
-	<version>0.1</version>
+	<version>0.1-SVN</version>
 	<description>A Web Browser</description>
 	<copyright>Daniel Bartlett [dan@f-box.org] 01 May 2009</copyright>
 	<initialWindow>
