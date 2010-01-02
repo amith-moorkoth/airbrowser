@@ -5,27 +5,46 @@ FLEXBIN=$(FLEXSDK)/bin
 
 MXMLC=$(FLEXBIN)/mxmlc
 AMXMLC=$(FLEXBIN)/amxmlc
+ADT=$(FLEXBIN)/adt
+ADL=$(FLEXBIN)/adl
 
 APPNAME=AirBrowser
 KEYFILE=private/distribution_key
 KEYPASS=AirBrowser
-APPXML=src/application.xml
-MXML=src/AirBrowser.mxml
-AIRSWF=bin/AirBrowser.swf
-AIRAPP=dist/AirBrowser.air
+APPXML=src/${APPNAME}-app.xml
+MXML=src/${APPNAME}.mxml
+AIRSWF=bin/${APPNAME}.swf
+AIRAPP=dist/${APPNAME}.air
 INCDIR=src/
 ASSETS=images/logo_128.png
 
-FLEXARGS=-optimize -headless-server -incremental -source-path=$(INCDIR) -source-path=/Flex/greensock-tweening-as3 -source-path=/Flex/as3crypto -source-path=/Flex/assql
+FLEXCONFIG=${FLEXSDK}/frameworks/air-config.xml
+FLEXLIBS=-source-path=/Flex/greensock-tweening-as3 -source-path=/Flex/as3crypto -source-path=/Flex/assql -source-path=/Flex/facebook
+FLEXARGS=-load-config ${FLEXCONFIG} -optimize -headless-server -incremental -source-path=$(INCDIR) $(FLEXLIBS)
+# -library-path+=:
 
 all: $(AIRSWF) $(AIRAPP)
+
+run: $(AIRSWF)
+	$(ADL) $(APPXML) ./
 
 $(AIRSWF): src/*
 	$(AMXMLC) $(FLEXARGS) -output $(AIRSWF) $(MXML)
 
-## Package the Air .app
-$(AIRAPP): $(AIRSWF) $(APPXML)
-	adt -package -storetype pkcs12 -keystore $(KEYFILE) -storepass $(KEYPASS) $(AIRAPP) $(APPXML) $(AIRSWF) $(ASSETS)
+$(AIRAPP): $(AIRSWF) $(APPXML) $(KEYFILE)
+	$(ADT) -package -storetype pkcs12 -keystore $(KEYFILE) -storepass $(KEYPASS) $(AIRAPP) $(APPXML) $(AIRSWF) $(ASSETS)
+
+$(KEYFILE):
+	$(ADT) -certificate -cn dan.f-box.org -ou dev -o "f-box" -c GB 2048-RSA $(KEYFILE) $(KEYPASS)
 
 clean:
 	rm -f bin/* dist/*
+
+distclean:
+	rm -f private/*
+
+localstatus:
+	git status ./
+
+remotestatus:
+	svn status ./
