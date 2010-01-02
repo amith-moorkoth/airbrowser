@@ -1,5 +1,4 @@
 
-
 FLEXSDK=/Flex/flexSDK-4
 FLEXBIN=$(FLEXSDK)/bin
 
@@ -7,6 +6,9 @@ MXMLC=$(FLEXBIN)/mxmlc
 AMXMLC=$(FLEXBIN)/amxmlc
 ADT=$(FLEXBIN)/adt
 ADL=$(FLEXBIN)/adl
+
+DEVVC=git
+PROVC=svn
 
 APPNAME=AirBrowser
 KEYFILE=private/distribution_key
@@ -43,8 +45,22 @@ clean:
 distclean:
 	rm -f private/*
 
-localstatus:
-	git status ./
+status:
+	$(DEVVC) status ./
+	$(PROVC) status ./
 
-remotestatus:
-	svn status ./
+commit:
+	$(DEVVC) commit ./
+	$(PROVC) commit ./
+
+devstatus:
+	$(DEVVC) status ./
+
+devcommit:
+	$(DEVVC) commit ./
+
+prodstatus:
+	$(PROVC) status ./
+
+prodcommit:
+	$(PROVC) commit ./
