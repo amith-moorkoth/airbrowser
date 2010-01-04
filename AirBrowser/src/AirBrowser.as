@@ -68,7 +68,7 @@ public function newtab():Number {
   tmphbox.addChild(tmpbutclose);
   tmpvbox.addChild(tmphbox);
   tmphtml.id = "html-" + tmpid;
-  tmphtml.location = "about:blank";
+  tmphtml.location = "http://";
   tmphtml.addEventListener(Event.COMPLETE, htmlloaded);
   tmphtml.width = tab1.width - 5;
   tmphtml.height = tab1.height - 65;
