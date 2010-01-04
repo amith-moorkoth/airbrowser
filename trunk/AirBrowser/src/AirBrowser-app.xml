@@ -3,9 +3,9 @@
 	<id>AirBrowser</id>
 	<filename>AirBrowser</filename>
 	<name>AirBrowser</name>
-	<version>0.1-SVN-44</version>
+	<version>0.1-SVN-46</version>
 	<description>A Web Browser</description>
-	<copyright>Daniel Bartlett [dan@f-box.org] 01 May 2009</copyright>
+	<copyright>Daniel Bartlett [dan@f-box.org] 02 Jan 2010</copyright>
 	<initialWindow>
 		<content>bin/AirBrowser.swf</content>
 		<title>AirBrowser</title>
